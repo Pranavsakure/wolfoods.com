@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 805px)" href="css/phone.css">
     <title>Wolve food delivery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,22 +19,23 @@
             <img src="companylogo.png" alt="">
         </div>
         <ul>
-            <li class="item"><a href="#">Home</a></li>
-            <li class="item"><a href="#">Services</a></li>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
             <li class="item"><a href="#">Our Clients</a></li>
-            <li class="item"><a href="#">Contact us</a></li>
+            <li class="item"><a href="#contact">Contact us</a></li>
         </ul>
     </nav>
     <section id="home">
         <h1 class="h-primary center">Welcome to wolfoods.com</h1>
-        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et animi vero! Blanditiis iure quo, atque sit provident.</p>
-        <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <button class="btn">Order Now</button>
+        <p class="center p-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae et animi vero! Blanditiis iure quo, atque sit provident.</p>
+        <p class="center p-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <button class="btn">Order now</button>
     </section>
-    
-    <section class="services-container">
+
+
+    <section id="services-container">
         <h1 class="h-primary center">Our Services</h1>
-        <div class="services">
+        <div id="services">
             <div class="box">
                 <img src="img/1.png" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis veniam quas perspiciatis architecto vitae a doloremque mollitia excepturi, est blanditiis assumenda unde aliquam labore quidem eos iusto molestiae suscipit, adipisci repudiandae libero. Vitae, ea!lorem23
@@ -54,9 +56,8 @@
             </div>
         </div>
     </section>
-
     <section id="client-section">
-        <h1 class="h-primary center">Our clients</h1>
+        <h1 id ="our-clients"class="h-primary center">Our clients</h1>
         <div class="client-images">
         <div class="client-item">
             <img src="img/logo1.png" alt="Our clients">
@@ -68,7 +69,7 @@
             <img src="img/logo2.png" alt="Our clients">
         </div>
         <div class="client-item">
-            <img src="img/logo1.png" alt="Our clients">
+            <img src="img/logo5.png" alt="Our clients">
         </div>
         <div class="client-item">
             <img src="img/logo3.png" alt="Our clients">
@@ -95,6 +96,9 @@
                 <div class="form-element">
                     <label for="message">Message:</label>
                     <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+                </div>
+                <div class="form-element">
+                    <input type="submit" value="Submit">
                 </div>
             </form>
         </div>

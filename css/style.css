@@ -1,18 +1,23 @@
 /* CSS reset */
 *{
     margin:0;
-    padding: 0px;
+    padding: 0;
 
+}
+html{
+    scroll-behavior: smooth;
 }
 
 /* for Navigation Bar */
 #navbar{
     display: flex;
     align-items: center;
-    position: absolute;/*By doing this we would be able to restrict background color to navbar*/
+    position: relative;/*By doing this we would be able to restrict background color to navbar*/
     top: 0px;
-    left: 0px;
     font-family: 'Times New Roman', Times, serif;
+    position: sticky;
+
+    
 
 }
 #navbar::before{
@@ -22,32 +27,36 @@
     top: 0px;
     left: 0px;
     height: 100%;/* w.r.t navbar*/
-    width:100vw;
+    width:100%;
     z-index: -1;
-    opacity: 1;
+    opacity: 0.7;
+    
 }
 #navbar img{
     height: 38px;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 30px;
+    opacity: 1;
 }
 #navbar ul{
     display: flex;
+    z-index: 20;
 }
 #navbar ul li{
     list-style: none;
-    text-decoration: none;
 }
 #navbar ul li a {
     color: white;
     display: block;
-    width: 80px;
     border-radius: 23px;
     /* by doing this up-down space would be there */
-    padding: 12px 34px;
+    margin: 10px 30px;
+    padding: 2px 6px;
     text-align: center;
     text-decoration: none;
+    z-index: 20;
+
 }
 #navbar ul li a:hover {
     color: black;
@@ -61,14 +70,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    height: 400px;
+    height: 24rem;
     top: 0px;
     left: 0px;
     right:0px;
-    padding :3px 100px;
-    padding-top:60px ;
-    padding-bottom:60px ;
+    margin :3px 100px;
+    margin-top:60px ;
+    margin-bottom:60px ;
 }
 #home::before{
     content: "";
@@ -76,8 +84,8 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 100%;/* w.r.t navbar*/
-    width:100vw;
+    height: 34rem;/* w.r.t navbar*/
+    width:100%;
     z-index: -1;
     opacity: 0.85;
 
@@ -88,23 +96,23 @@
 }
 #home p{
     color: white;
-    font-size: 1.2rem;
-    font-family: 'Baskervville', serif;
 }
 
 /*For services section*/
-.services-container{
+#services-container{
     margin-top: 0rem; 
     margin-bottom: 2rem;
 }
-.services{
+#services{
     display: flex;
+
 }
 .box{
     border: 2px solid black;
     background-color: rgb(216, 215, 215);
+
     padding: 10px;
-    margin: 3px 10px;
+    margin: 3px 37px;
     border-radius: 10px;
     text-align: center;
 }
@@ -119,6 +127,7 @@
 #client-section{
     position: relative;
     margin-bottom: 10px;
+    z-index: -1;
 
 }
 #client-section::before{
@@ -127,7 +136,7 @@
     position: absolute;
     height: 110%;
     width:100%;
-    z-index: -1;
+    z-index: -2;
     opacity: 0.4;
 }
 
@@ -146,7 +155,7 @@
 
 #contact{
     position: relative;
-    margin-bottom: 14px; 
+    margin-bottom: 14px;
 }
 #contact::before{
     content: "";
@@ -160,25 +169,48 @@
 
 #contact-box{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
     padding-bottom: 10px;
 }
-
+#contact-box form{
+    width: 40%;
+}
 .form-element{
     display: flex;
     flex-direction: column;
 }
 
+
 .form-element input{
-    width: 400px;
     height: 2rem;
     padding: 5px;
     border: 2px solid black;
     border-radius: 10px;
 }
+.form-element input[type="submit"]
+{
+    width: 20%;
+    position: relative;
+    left: 80%;
+    margin-top: 10px;
+    background-color: grey;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.form-element input[type="submit"]:hover
+{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    
+
+}
 .form-element textarea{
-    width: 400px;
     height: 6rem;
     padding: 5px;
     border: 2px solid black;
@@ -186,6 +218,7 @@
 
 }
 .form-element label{
+    display: block;
     font-size: 1.2rem;
     margin: 5px;
     font-weight: bold;
@@ -193,6 +226,7 @@
 }
 
 /* for footer */
+
 footer{
     background-color: rgb(37, 36, 36);
     color: white;
@@ -214,6 +248,7 @@ footer{
     font-weight: bold;
     padding: 8px 7px;
     font-family: 'Baloo Bhai 2', cursive;}
+
 .btn{
     background-color: brown;
     color: aliceblue;
@@ -221,4 +256,9 @@ footer{
     padding: 8px 20px;
     cursor: pointer;
     margin: 23px;
+}
+
+.p-primary{
+    font-size: 1rem;
+    font-family: 'Baskervville', serif;
 }
