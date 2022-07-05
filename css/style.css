@@ -262,3 +262,11 @@ footer{
     font-size: 1rem;
     font-family: 'Baskervville', serif;
 }
+
+@media screen and (max-height:550px) {
+    #navbar{
+        position: relative;
+        z-index: 2;
+    }
+    
+}
